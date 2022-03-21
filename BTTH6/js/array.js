@@ -41,3 +41,27 @@ function sap_giam(){
     }
     return arr
 }
+//dung thu vien bi loi khi them
+// function sap_giam(){
+//     arr.reverse()
+//     return arr
+// }
+// sap_giam()
+
+function them(a,x){
+    arr.splice(x,0,a)
+    return arr
+ }
+ // them(3,5)
+ // su kien click tao mang
+ const btnCreat=document.getElementById('btnCreat')
+ btnCreat.addEventListener('click',function(){
+     let showArr=document.querySelector("#showArr")
+     showArr.textContent = tao_mang().join(', ')
+ })
+ //su kien sap xep tang
+ const AscSort=document.getElementById('Ascsort')
+     AscSort.addEventListener('click',function(){
+     let showlastArr=document.querySelector('#showlastArr')
+     showlastArr.textContent=sap_tang().join(', ')
+ })
