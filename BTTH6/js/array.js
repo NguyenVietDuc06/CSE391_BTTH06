@@ -65,3 +65,25 @@ function them(a,x){
      let showlastArr=document.querySelector('#showlastArr')
      showlastArr.textContent=sap_tang().join(', ')
  })
+ //su kien sap xep giam
+const DscSort=document.getElementById('Dscsort')
+DscSort.addEventListener('click',function(){
+let showlastArr=document.querySelector('#showlastArr')
+showlastArr.textContent=sap_giam().join(', ')
+})
+//su kien them phan tu
+const addItem=document.getElementById('btnAdd')
+addItem.addEventListener('click',function(){
+    let value=document.getElementById('inputItem').value
+    let index=document.getElementById('inputPos').value
+    let showlastArr=document.querySelector('#showlastArr')
+    if(showArr.textContent==''){
+        alert('Vui lòng tạo mảng trước khi thêm')
+    }
+    else if(value==''||index=='')
+    {
+        alert('Vui lòng nhập thông tin phần tử cần thêm')
+    }
+    else
+    showlastArr.textContent=them(value,index).join(', ')
+})
